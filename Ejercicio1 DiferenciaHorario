@@ -1,0 +1,37 @@
+// NDS.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main ()
+{
+	int hh1, hh2, mm1, mm2, ss1, ss2, hht1, hht2, hhf, mmf, ssf, d;
+	cout<< "Ingrese Hora Inicial: ";
+	cin>> hh1;
+	cout<< "Ingrese Minuto Inicial: ";
+	cin>> mm1;
+	cout<< "Ingrese Segundo Inicial: ";
+	cin>> ss1;
+	cout<< "Ingrese Hora Final: ";
+	cin>> hh2;
+	cout<< "Ingrese Minuto Final: " ;
+    cin>> mm2;
+	cout<< "Ingrese Segundo Final: " ;
+	cin>> ss2;
+	hht1= hh1*3600 + mm1*60 + ss1;
+	hht2= hh2*3600 + mm2*60 + ss2;
+	d= hht2 - hht1;
+	if (d<0)
+		d=-d;
+	hhf=d/3600;
+	mmf=d/60-hhf*60;
+	ssf=d-hhf*3600-mmf*60;
+
+	cout<< "La Diferencia es: " ;
+	cout<< hhf<<":"<<mmf<<":"<<ssf;
+    getch ();
+}
